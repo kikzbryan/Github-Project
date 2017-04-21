@@ -1,0 +1,40 @@
+<ion-view title="Compound interest">
+    <ion-nav-bar class="bar-assertive">
+        <ion-nav-back-button></ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content class="padding">
+        <div class="spacer" style="height: 30px;"></div>
+        <div class="spacer" style="height: 30px;"></div>
+        <form ng-controller="IntrestCtrl">
+            <div class="list">
+                <label class="item item-input">
+    <span class="input-label">Principal</span>
+    <input type="text" class="form-control" id="p" ng-model="principal">
+  </label>
+
+                <label class="item item-input">
+    <span class="input-label">Rate:</span>
+    <input type="text" class="form-control" id="r" ng-model="rate">
+  </label>
+
+                <label class="item item-input">
+    <span class="input-label">Time:</span>
+    <input type="text" class="form-control" id="t" ng-model="time">
+  </label>
+
+                <label class="item item-input">
+    <span class="input-label">Compound per Year:</span>
+    <input type="text" class="form-control" id="t" ng-model="time">
+  </label>
+
+
+                <button class="button button-block button-positive" ng-click="calculate()">
+  Calculate
+</button>
+
+                <p class="bg-danger">Compound Interest: <strong>{{interest() | currency}}</strong></p>
+            </div>
+        </form>
+
+    </ion-content>
+</ion-view>
